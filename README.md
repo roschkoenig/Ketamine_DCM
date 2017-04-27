@@ -16,10 +16,15 @@ The repository includes a number of different routines to be run manually to rep
 ```
 ket_sensorspace
 ```
+This routine performs the 'standard' sensor space ERP analysis based on the data provided (in the SPM-specific MEEG format, in the `~/SPM-ready Data/` folder) The figures it produces were the basis for _Fig 2_ in the manuscript accompanying this code. The first section will identify time periods of significant difference between (a) the deviant and the last standard, and (b) between the first and the last standard, stringently corrected for multiple comparisons. All ERPs and periods of significant difference will be plotted as below.
 
 ![Standard and Deviant ERPs](https://cloud.githubusercontent.com/assets/12950773/25479254/2bad1094-2b3c-11e7-8104-3b70df384ece.png)
 
+The second section will calculate the difference waveform between the first (i.e. deviant) and the last (i.e. standard 36) tone of the sequence (i.e. the mismatch negativity, *MMN*) and test for significant differences in peak amplitude. All testing up until this point is done at the *Fz* electrode, according to literature standards. 
+
 ![Difference wave form (MMN)](https://cloud.githubusercontent.com/assets/12950773/25479257/2e7d8844-2b3c-11e7-924b-749be7366b6a.png)
+
+The last section will plot all EEG channels over time for the three standard - deviant difference waves (left to right: D1-S2, D1-S6, D1-S36); with placebo in the top row and ketamine in the bottom row. This illustrates an overall reduction of the ERPs caused by ketamine across the scalp and for all of the different conditions. 
 
 ![Scalp topographies](https://cloud.githubusercontent.com/assets/12950773/25479259/30c18e52-2b3c-11e7-95ed-5a52201acc1e.png)
 
