@@ -24,16 +24,16 @@ The second section will calculate the difference waveform between the first (i.e
 
 ![Difference wave form (MMN)](https://cloud.githubusercontent.com/assets/12950773/25479257/2e7d8844-2b3c-11e7-924b-749be7366b6a.png)
 
-The last section will plot all EEG channels over time for the three standard - deviant difference waves (left to right: D1-S2, D1-S6, D1-S36); with placebo in the top row and ketamine in the bottom row. This illustrates an overall reduction of the ERPs caused by ketamine across the scalp and for all of the different conditions. 
+The last section will plot all EEG channels over time for the three standard - deviant difference waves (left to right: **D1-S2**, **D1-S6**, **D1-S36**); with placebo in the top row and ketamine in the bottom row. This illustrates an overall reduction of the ERPs caused by ketamine across the scalp and for all of the different conditions. 
 
 ![Scalp topographies](https://cloud.githubusercontent.com/assets/12950773/25479259/30c18e52-2b3c-11e7-95ed-5a52201acc1e.png)
-
 
 
 ### Invert Dynamic Causal Models (DCM) and perform Bayesian Model Reduction (BMR) to explain the effect of tone repetition 
 ```
 ket_dcm
 ```
+This routine will perform a 2-stage DCM inversion for the data described in the section above: In the first instance, a single DCM will be inverted for the repetition effects across grand mean averages of the ERP. This grand mean inversion is saved and posterior estimates of the parameters are then used as priors for inverting individual subject DCMs.
 
 ![DCM Inversion](https://cloud.githubusercontent.com/assets/12950773/25479274/3822e330-2b3c-11e7-9a42-7455810e4e7a.png)
 
