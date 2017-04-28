@@ -34,8 +34,11 @@ The last section will plot all EEG channels over time for the three standard - d
 ket_dcm
 ```
 This routine will perform a 2-stage DCM inversion for the data described in the section above: In the first instance, a single DCM will be inverted for the repetition effects across grand mean averages of the ERP. This grand mean inversion is saved and posterior estimates of the parameters are then used as priors for inverting individual subject DCMs.
+Each participant's ERPs will then be inverted in individual DCMs for the ketamine and the placebo condition separately. The inversion can take approximately *~30 minutes per subject* and drug-condition and should produce the visual output seen below.  
 
 ![DCM Inversion](https://cloud.githubusercontent.com/assets/12950773/25479274/3822e330-2b3c-11e7-9a42-7455810e4e7a.png)
+
+After all models have been inverted, the routine will also display the first principal eigenmodes of the model fits for each of the subjects, again separately for ketamine and placebo-controlled conditions. 
 
 ![Model fits](https://cloud.githubusercontent.com/assets/12950773/25479282/3c1a7a48-2b3c-11e7-884c-b92b5e51c118.png)
 
