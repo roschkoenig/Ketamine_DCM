@@ -146,11 +146,11 @@ k = MMN{2}.dat;
 
 ppeaks = max(p(:, 100:150)');   % note that time is indexed in 2ms steps
 kpeaks = max(k(:, 100:150)');
-[H P] = ttest(ppeaks, kpeaks, 'tail', 'right');
+[Hp Pp CIp Sp] = ttest(ppeaks, kpeaks, 'tail', 'right');
 
 ptroughs = min(p(:, 150:200)');   % note that time is indexed in 2ms steps
 ktroughs = min(k(:, 150:200)');
-[H P] = ttest(ptroughs, ktroughs, 'tail', 'left');
+[Ht Pt CIt St] = ttest(ptroughs, ktroughs, 'tail', 'left');
 
 % Plot MMN for placebo and ketamine
 %==========================================================================
